@@ -63,16 +63,43 @@ public class Overworld
 		System.out.println("1: to the bar\n2: to the movies");
 		
 		int c = s.nextInt();
+		int location = 0;//check for location setting
 		
 		switch(b)
 		{
 		case 1:
 			System.out.println(player + " you are now at the bar.");
+			location = 1;
 			break;
 		case 2:
 			System.out.println(player + " you are going to see a movie.");
+			location = 2;
+			break;
 		}
+		
+		if(location == 2)//get the locaction number for the players choice
+		{
+			System.out.println();
+			atMovies();
+		}
+		else
+			if(location == 1)
+			{
+				System.out.println();
+				atBar();
+			}
+	}
 
+	private static void atBar() 
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void atMovies()
+	{
+		System.out.println("You Have arrived at the movies\n what film do you want to see?");
+		
 	}
 
 }
